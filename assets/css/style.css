@@ -1,0 +1,296 @@
+/*** BEGIN Nav styling **/
+
+nav {
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    margin-bottom: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    overflow: hidden;
+    width: 960px;
+    margin: 0 auto;
+}
+
+nav li {
+    float: right;
+    display: inline;
+    padding: 20px 0 20px 0;
+}
+
+.logo {
+    background-color: #4aaaa5;
+}
+
+nav li h1 {
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+nav li:not(:first-child):not(:last-child):before {
+    content: " | ";
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+nav li a {
+    text-align: center;
+    text-decoration: none;
+    color: #777777;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+    color: #4aaaa5;
+}
+
+/*** END Content styling **/
+
+body {
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    color: #777777;
+    background-image: url("../images/concrete-texture.png");
+    background-color: #cccccc;
+    background-repeat: repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+section {
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #4aaaa5;
+    font-weight: bold;
+    font-size: 28px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+h2 {
+    color: #4aaaa5;
+    font-weight: bold;
+    font-size: 22px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+p {
+}
+
+.content-img {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+#body-content {
+    width: 960px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.body-content-box {
+    width: 608px;
+    float: left;
+    border: 1px solid #dddddd;
+    margin-right: 20px;
+    padding: 20px;
+}
+
+.body-connect-box {
+    width: 228px;
+    float: right;
+    border: 1px solid #dddddd;
+    margin-left: 20px;
+    padding: 20px;
+}
+
+.connect-imgs {
+    padding-right: 5px;
+}
+
+a:hover .connect-imgs {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+hr {
+    border-color: #dddddd;
+    border-style: solid;
+    margin: 20px 0 20px 0;
+}
+
+footer {
+    background-color: #666666;
+    font-size: 12px;
+    color: #dddddd;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-top: 7px solid #4aaaa5;
+}
+
+.clear {
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+/*** BEGIN Contact Form Styling **/
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    /**border-radius: 4px;**/
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 120px;
+    font-size: 18px;
+    background-color: #4aaaa5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    /**border-radius: 4px;**/
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #666666;
+}
+
+.input {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+
+/*** BEGIN Portfolio Styling **/
+
+.portfolio-box {
+    position: relative;
+    margin: 20px 0 20px 0;
+}
+
+.portfolio-title {
+    background-color: #4aaaa5;
+    color: #fff;
+    text-align: center;
+}
+
+.portfolio-box:nth-child(odd) {
+    float: left;
+    margin-right: 20px;
+}
+
+.portfolio-box:nth-child(even) {
+    float: right;
+    margin-left: 20px;
+}
+
+.portfolio-title {
+    position: absolute;
+    width: 275px;
+    padding: 10px 0 10px 0;
+    bottom: 20px;
+}
+
+.portfolio-box a:hover img {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.portfolio-box a:hover .portfolio-title {
+    background-color: #666666;
+}
+
+/*** BEGIN Media Queries ***/
+
+@media screen and (max-width: 980px) {
+    #body-content {
+        width: 75%;
+    }
+
+    nav ul {
+        width: 75%;
+    }
+
+    .body-content-box {
+        width: 52%;
+    }
+
+    .body-connect-box {
+        width: 30%;
+    }
+    .portfolio-box {
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #body-content {
+        width: 95%;
+        margin: 0 20px 20px 20px;
+    }
+
+    nav ul {
+        width: 95%;
+    }
+
+    .body-content-box {
+        width: 94%;
+        float: none;
+        margin: 0 0 20px 0;
+        overflow: visible;
+    }
+
+    .body-connect-box {
+        width: 94%;
+        float: none;
+        margin-left: 0;
+    }
+
+    .portfolio-box {
+
+    }
+}
+}
+
+@media screen and (max-width: 640px) {
+    nav ul {
+        width: 100%;
+        margin: 0;
+    }
+
+    .body-content-box {
+        width: 90%;
+    }
+
+    .body-connect-box {
+        width: 90%;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0 20px 0;
+    }
+
+    nav li {
+        width: 30%;
+        padding: 10px 0 10px 0;
+    }
+}
